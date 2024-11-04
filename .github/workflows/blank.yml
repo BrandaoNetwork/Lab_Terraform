@@ -6,7 +6,7 @@ on:
 jobs:
   primeiro-job:
     name: "Meu Primeiro Job"
-    runs-on: ubuntu-lastet
+    runs-on: ubuntu-latest
     steps:
       - name: "Minha primeira ação"
         run: echo "Hello Word !!"
