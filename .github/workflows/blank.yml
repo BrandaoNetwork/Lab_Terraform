@@ -10,13 +10,21 @@ jobs:
     steps:
       - name: "Minha primeira ação"
         run: echo "Hello Word !!"
-      - name: "Segunda acão"
+      - name: "Segunda ação"
         run: |
           echo "Você criou o seu primeiro workflow !!!"
-          echo "Parabens !!!"
+          echo "Parabéns !!!"
       - name: "Script Python"
         run: |
-          variavel = "Hello Word"
+          variavel = "Hello World"
           print(variavel)
         shell: python
-      
+      - name: "Comment reactions"
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.reactions.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_reactions: yes
+          plugin_reactions_limit: 100
+          plugin_reactions_details: percentage
