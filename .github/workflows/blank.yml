@@ -1,0 +1,16 @@
+name: primeira pipiline
+on:
+  push:
+    branches: ["main"] 
+  workflow_dispatch:
+jobs:
+  primeiro-job:
+    name: "Meu Primeiro Job"
+    runs-on: ubuntu-lastet
+    steps:
+      - name: "Minha primeira ação"
+        run: echo "Hello Word !!"
+      - name: "Segunda acão"
+        run:
+          echo "Você criou o seu primeiro workflow !!!"
+          echo "Parabes !!!"
